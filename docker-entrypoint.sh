@@ -1,8 +1,8 @@
 #!/bin/bash
  
-FILE="/app/app/package.json"
+FILE="/app/web/package.json"
 if [ -e $FILE ]; then
-  app/yarn
+  web/yarn
 fi
 
 /bin/bash

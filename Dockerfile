@@ -4,8 +4,8 @@ COPY docker-entrypoint.sh ./app/
 COPY ./ ./app/
 
 USER root
-RUN mkdir /app/app/node_modules
-RUN chown node:node /app/app/node_modules
+RUN mkdir /app/web/node_modules
+RUN chown node:node /app/web/node_modules
 USER $USER_UID
 
 WORKDIR /app

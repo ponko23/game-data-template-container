@@ -1,0 +1,34 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.122.1/containers/docker-existing-docker-compose
+// If you want to run as a non-root user in the container, see .devcontainer/docker-compose.yml.
+{
+  "name": "game-data",
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  "service": "game_data",
+  "workspaceFolder": "/app",
+  "settings": {
+    "terminal.integrated.shell.linux": null,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true, // Prettier を実行
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true // ESLint を実行
+    },
+    "git.ignoreMissingGitWarning": true
+  },
+  "extensions": [
+    "eamodio.gitlens",
+    "chakrounanas.turbo-console-log",
+    "visualstudioexptteam.vscodeintellicode",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "shardulm94.trailing-spaces",
+    "msjsdiag.debugger-for-chrome",
+    "christian-kohler.path-intellisense",
+    "usernamehw.errorlens",
+    "gizak.shortcuts",
+    "coenraads.bracket-pair-colorizer-2"
+  ],
+  "postCreateCommand": "apt-get update"
+}
